@@ -9,9 +9,17 @@
     "lint": "next lint",
     "prepare": "husky install"
   },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint --cache --fix",
+      "prettier --cache --write"
+    ],
+    "*.{css,json,html}": "prettier --check"
+  },
   "dependencies": {
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "lint-staged": "^15.2.8",
     "lucide-react": "^0.424.0",
     "next": "14.2.5",
     "react": "^18",
